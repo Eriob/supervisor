@@ -3,7 +3,7 @@
             <div class="page-content">
                 <!-- BEGIN PAGE HEADER-->
                 <h3 class="page-title">
-                To Do</h3>
+                Charts</h3>
                 <div class="page-bar">
                     <ul class="page-breadcrumb">
                         <li>
@@ -12,7 +12,7 @@
                             <span class="glyphicon glyphicon-chevron-right"></i>
                         </li>
                         <li>
-                            <a href="index.php?index=ToDo">To Do</a>
+                            <a href="index.php?index=charts">Charts</a>
                         </li>
                     </ul>
                     <div class="page-toolbar">
