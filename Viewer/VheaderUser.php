@@ -16,7 +16,7 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 <link href="./bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="./bootstrap/css/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="./bootstrap//css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="./bootstrap/css/uniform.default.css" rel="stylesheet" type="text/css"/>
 <link href="./bootstrap/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
 <link href="./bootstrap/css/jquery.easypiechart.css" rel="stylesheet" type="text/css"/>
@@ -48,7 +48,7 @@
 	<div class="page-header-inner container">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="./index.html">
+			<a href="index.php?index=index">
 			<!--<img src="./Viewer/images/logo.png" alt="logo" class="logo-default"/>-->
 			</a>
 			<div class="menu-toggler sidebar-toggler">
@@ -65,7 +65,7 @@
 		<div class="page-top">
 			<!-- BEGIN HEADER SEARCH BOX -->
 			<!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
-			<form class="search-form search-form-expanded" action="extra_search.html" method="GET">
+			<form class="search-form search-form-expanded" action="index.php?index=search" method="POST">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search..." name="query">
 					<span class="input-group-btn">
@@ -81,12 +81,61 @@
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<span class="badge badge-default">0 </span>
+						<span class="badge badge-default">5 </span>
 						<span class="glyphicon glyphicon-bell"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li class="external">
-								<h3>You are <span class="bold">not</span> logged in</h3>
+								<h3><span class="bold">5 dernières</span> notifications</h3>
+							</li>
+							<li>
+								<ul class="dropdown-menu-list scroller" style="height: 160px;" data-handle-color="#637283">
+									<li>
+										<a href="javascript:;">
+										<span class="time">just now</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-success">
+										</span>
+										New user registered. </span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+										<span class="time">10 mins</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-warning">
+										</span>
+										Server not responding. </span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+										<span class="time">3 days</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-danger">
+										</span>
+										A user IP blocked. </span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+										<span class="time">just now</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-success">
+										</span>
+										New user registered. </span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+										<span class="time">10 mins</span>
+										<span class="details">
+										<span class="label label-sm label-icon label-warning">
+										</span>
+										Server not responding. </span>
+										</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -95,12 +144,39 @@
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 					<li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<span class="badge badge-default">0 </span>
+						<span class="badge badge-default">2 </span>
 						<span class="glyphicon glyphicon-envelope"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li class="external">
-								<h3>Vous are <span class="bold">not</span> logged in</h3>
+								<h3>Vous avez <span class="bold">2</span> Messages</h3>
+								<a href="index.php?index=inbox">Voir tout</a>
+							</li>
+							<li>
+								<ul class="dropdown-menu-list scroller" style="height: 180px;" data-handle-color="#637283">
+									<li>
+										<a href="inbox.html?a=view">
+										<span class="subject">
+										<span class="from">
+										Lisa Wong </span>
+										<span class="time">Just Now </span>
+										</span>
+										<span class="message">
+										Salut, tu peux superviser mon réseau ?</span>
+										</a>
+									</li>
+									<li>
+										<a href="inbox.html?a=view">
+										<span class="subject">
+										<span class="from">
+										Richard Doe </span>
+										<span class="time">16 mins </span>
+										</span>
+										<span class="message">
+										Bonjour, je te transmet mes coordonnées :)</span>
+										</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -111,67 +187,36 @@
 					<!-- END TODO DROPDOWN -->
 					<!-- BEGIN USER LOGIN DROPDOWN -->
 					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li>
-					<!--<li class="dropdown dropdown-user">
+					<li class="dropdown dropdown-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<span class="username username-hide-on-mobile">-->
+						<span class="username username-hide-on-mobile">
+						<?php 
+							if(isset($_SESSION['name'])){
+								echo $_SESSION['name'];
+							}
 
-					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Log In</button>
-
-					<!-- Modal -->
-					<div class="modal fade" id="myModal" role="dialog">
-					    <div class="modal-dialog">
-					      <!-- Modal content-->
-					      <div class="modal-content">
-					        <div class="modal-header">
-					          <button type="button" class="close" data-dismiss="modal">&times;</button>
-					          <h4 class="modal-title"><b>Who are you ?</b></h4>
-					        </div>
-					        <div class="modal-body">
-					          	<form class="form-horizontal" method="POST" action="index.php?index=login">
-								<fieldset>
-								<!-- Text input-->
-								<div class="form-group">
-								  <label class="col-md-4 control-label" for="name"></label>  
-								  <div class="col-md-5">
-								  <input id="name" name="username" type="text" placeholder="Identity" class="form-control input-md" required="">
-								    
-								  </div>
-								</div>
-
-								<!-- Password input-->
-								<div class="form-group">
-								  <label class="col-md-4 control-label" for="password"></label>
-								  <div class="col-md-5">
-								    <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
-								    
-								  </div>
-								</div>
-
-								<!-- Button -->
-								<div class="form-group">
-								  <label class="col-md-4 control-label" for="login"></label>
-								  <div class="col-lg-6 col-md-6">
-								    <button id="login" name="login" class="btn btn-success btn-lg">Log In</button>
-								  </div>
-								</div>
-
-								</fieldset>
-								</form>
-					        </div>
-					        <div class="modal-footer">
-					          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					        </div>
-					      </div>
-					      
-					    </div>
-					  </div>
-					</li>
-
-
-						<!--</span>
+						?>
+						</span>
 						<span class="glyphicon glyphicon-user"></span>
-						</a>-->
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li>
+								<a href="index.php?index=myProfile">
+								<span class="glyphicon glyphicon-user"></span> My Profile </a>
+							</li>
+							<li>
+								<a href="index.php?index=inbox">
+								<span class="glyphicon glyphicon-envelope"></span> My Inbox <span class="badge badge-danger">
+								2 </span>
+								</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="index.php?index=disconnect">
+								<span class="glyphicon glyphicon-log-out"></span> Log Out </a>
+							</li>
+						</ul>
 					</li>
 					<!-- END USER LOGIN DROPDOWN -->
 				</ul>

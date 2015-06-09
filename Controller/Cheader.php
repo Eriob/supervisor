@@ -2,8 +2,8 @@
 	include('./Model/MconnectBDD.php');
 
 	if (isset($_SESSION['name'])) {
-		include ('./Viewer/Vindex.php');
+		include ('./Viewer/VheaderUser.php');
 	}else{
-		include('./Viewer/Vindex.php');
+		include ('./Viewer/Vheader.php');
 	}
 ?>
