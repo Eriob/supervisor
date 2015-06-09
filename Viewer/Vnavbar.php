@@ -11,25 +11,62 @@
 				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
 				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
 				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-					<li class="start active ">
+					<?php
+					if(isset($_GET['index']) && $_GET['index'] == "index"){
+						echo '<li class="start active">';
+					}else{
+						echo '<li>';
+					}
+					?>
 						<a href="index.php?index=index">
 						<span class="glyphicon glyphicon-home"></span>
 						<span class="title">Dashboard</span>
 						<?php
-						if($_GET['index'] == "index"){
+						if(isset($_GET['index']) && $_GET['index'] == "index"){
 							echo '<span class="selected"></span>';
 						}
 						?>
 						</a>
 					</li>
-					<li>
-						<a href="javascript:;">
+					<?php
+					if(isset($_GET['index']) && $_GET['index'] == "charts"){
+						echo '<li class="start active">';
+					}else{
+						echo '<li>';
+					}
+					?>
+						<a href="index.php?index=charts">
 						<span class="glyphicon glyphicon-stats"></span>
 						<span class="title">Charts</span>
 						<?php
-						if(isset($_GET['index']) && $_GET['index'] == "chartsOne"){
+						if(isset($_GET['index']) && $_GET['index'] == "charts"){
 							echo '<span class="selected"></span>';
-						}else if(isset($_GET['index']) && $_GET['index'] == "chartsTwo"){
+						}else{
+						}
+						?>
+						<span class="arrow "></span>
+						</a>
+					</li>
+					<?php
+					if(isset($_GET['index']) && $_GET['index'] == "aboutus"){
+						echo '<li class="start active">';
+					}else if(isset($_GET['index']) && $_GET['index'] == "products"){
+						echo '<li class="start active">';
+					}else if(isset($_GET['index']) && $_GET['index'] == "contactus"){
+						echo '<li class="start active">';
+					}else{
+						echo '<li>';
+					}
+					?>
+						<a href="javascript:;">
+						<span class="glyphicon glyphicon-plus"></span>
+						<span class="title">Extra</span>
+						<?php
+						if(isset($_GET['index']) && $_GET['index'] == "aboutus"){
+							echo '<span class="selected"></span>';
+						}else if(isset($_GET['index']) && $_GET['index'] == "products"){
+							echo '<span class="selected"></span>';
+						}else if(isset($_GET['index']) && $_GET['index'] == "contactus"){
 							echo '<span class="selected"></span>';
 						}else{
 						}
@@ -38,35 +75,20 @@
 						</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="charts_amcharts.html"><span class="glyphicon glyphicon-stats"></span>
-								First Graphe</a>
-							</li>
-							<li>
-								<a href="charts_flotcharts.html"><span class="glyphicon glyphicon-stats"></span> Second Graphe</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="javascript:;">
-						<span class="glyphicon glyphicon-plus"></span>
-						<span class="title">Extra</span>
-						<span class="arrow "></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="page_about.html"><span class="glyphicon glyphicon-eye-open"></span>
+								<a href="index.php?index=aboutus"><span class="glyphicon glyphicon-eye-open"></span>
 								About Us</a>
 							</li>
 							<li>
-								<a href="page_products.html"><span class="glyphicon glyphicon-book"></span>
+								<a href="index.php?index=products"><span class="glyphicon glyphicon-book"></span>
 								Products</a>
 							</li>
 							<li>
-								<a href="page_contact.html"><span class="glyphicon glyphicon-pencil"></span>
+								<a href="index.php?index=contactus"><span class="glyphicon glyphicon-pencil"></span>
 								Contact Us</a>
 							</li>
 						</ul>
 					</li>
+					
 				</ul>
 				<!-- END SIDEBAR MENU -->
 			</div>
