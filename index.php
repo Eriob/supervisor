@@ -16,21 +16,27 @@ include_once('./Controller/Cnavbar.php');
         switch ($_GET['index']) {
             case "login":
                 include('./Controller/Clogin.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "discoverAll":
                 include('./Controller/CdiscoverAll.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "discoverOne":
                 include('./Controller/CdiscoverOne.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "myProfile":
                 include('./Controller/CmyProfile.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "inbox":
                 include('./Controller/Cinbox.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "disconnect":
                 include('./Controller/Cdisconnect.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "manageRights":
                 include('./Controller/CmanageRights.php');
@@ -40,36 +46,43 @@ include_once('./Controller/Cnavbar.php');
                 break;
             case "charts":
                 include('./Controller/Ccharts.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "aboutus":
                 include('./Controller/Caboutus.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "products":
                 include('./Controller/Cproducts.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "contactus":
                 include('./Controller/Ccontactus.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "searchAll":
                 include('./Controller/CdiscoverAll.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "ToDo":
                 include('./Controller/CToDo.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "addProfileSupervision":
                 include('./Controller/CaddProfileSupervision.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "showTraps":
                 include('./Controller/CshowTraps.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             default:
                 include('./Controller/Cindex.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
         }   
     }else{
         include_once('./Controller/Cindex.php');
     }
-
-    include_once('./Viewer/Vfooter.php');
 
 ?>
