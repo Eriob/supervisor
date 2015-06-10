@@ -11,7 +11,7 @@ function manageUsers(){
 					<div class="col-lg-10 col-md-10 col-xs-10">
 						<form class="form-horizontal" name="manage_users" method="POST" action="index.php?index=manageUsers">
 						<table class="table table-bordered">
-							<thead><tr><th>Nom utilisateur</th><th>Ban</th></tr></thead><tbody>'
+							<thead><tr><th>Nom utilisateur</th><th>Ban</th></tr></thead><tbody>';
 							
 
 	while($users = mysql_fetch_array($request)){
