@@ -64,7 +64,7 @@
 						</a>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-						<a class="dashboard-stat dashboard-stat-light purple-soft" href="javascript:;">
+						<a class="dashboard-stat dashboard-stat-light purple-medium" href="javascript:;">
 						<div class="visual">
 						</div>
 						<div class="details">
