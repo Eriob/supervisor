@@ -16,9 +16,9 @@ function manageUsers(){
 
 	while($users = mysql_fetch_array($request)){
 		if($users['ban'] == 0){
-			echo "<tr><td>".$users['username']."</td><td> <input type='radio' name='ban'></td></tr>";
+			echo "<tr><td>".$users['username']."</td><td> <input type='text' name='ban' placeholder='No'></td></tr>";
 		}else{
-			echo "<tr><td>".$users['username']."</td><td> <input type='radio' name='ban' checked> </td></tr>";
+			echo "<tr><td>".$users['username']."</td><td> <input type='text' name='ban' placeholder='Yes'> </td></tr>";
 		}
 	}
 
