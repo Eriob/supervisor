@@ -2,7 +2,7 @@
 	include('./Model/MconnectBDD.php');
 
 	if ($_GET['index'] == "discoverAll") {
-		if (isset($_SESSION['name'])) {
+		if(isset($_SESSION['name'])) {
 			include('./Viewer/VdiscoverAll.php');
 		}
 	}elseif($_GET['index'] == "searchAll") {
