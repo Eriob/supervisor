@@ -25,7 +25,7 @@
 <script src="./bootstrap/js/jquery.flot.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery.flot.resize.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery.flot.categories.min.js" type="text/javascript"></script>
-<script src="./bootstrap/js/jquery.pulsate.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/pulsate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
 <script src="./bootstrap/js/fullcalendar.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery.easypiechart.min.js" type="text/javascript"></script>
