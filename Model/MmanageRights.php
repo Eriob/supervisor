@@ -16,12 +16,12 @@ function manageUsers(){
 	while($users = mysql_fetch_array($request)){
 		if($users['rights'] == "user"){
 			echo "<tr><td>".$users['username']."</td><td>
-			<select><option value='user' name='ban".$users['username']."' selected> User </option>
-					<option value='administrator' name='ban".$users['username']."'> Administrator </option></select>";
+			<select><option value='user' name='rights".$users['username']."' selected> User </option>
+					<option value='administrator' name='rights".$users['username']."'> Administrator </option></select>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
-			<select><option value='user' name='ban".$users['username']."'> User </option>
-					<option value='administrator' name='ban".$users['username']."' selected> Administrator </option></select>";
+			<select><option value='user' name='rights".$users['username']."'> User </option>
+					<option value='administrator' name='rights".$users['username']."' selected> Administrator </option></select>";
 		}
 	}
 

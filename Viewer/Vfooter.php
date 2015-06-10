@@ -36,7 +36,7 @@
 <script src="./bootstrap/js/layout.js" type="text/javascript"></script>
 <script src="./bootstrap/js/demo.js" type="text/javascript"></script>
 <script src="./bootstrap/js/index.js" type="text/javascript"></script>
-<script src="./bootstrap/js/tasks.js" type="text/javascript"></script>
+<!--<script src="./bootstrap/js/tasks.js" type="text/javascript"></script>-->
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
    Index.initCharts(); // init index page's custom scripts
    Index.initChat();
    Index.initMiniCharts();
-   Tasks.initDashboardWidget();
+   //Tasks.initDashboardWidget();
    
 });
 </script>
