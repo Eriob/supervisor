@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
    Index.initCharts(); // init index page's custom scripts
    Index.initChat();
    Index.initMiniCharts();
-   //Tasks.initDashboardWidget();
+   Tasks.initDashboardWidget();
    
 });
 </script>
