@@ -31,23 +31,52 @@
                                                                                                 }else{
                                                                                                     echo "Non enregistré";
                                                                                                 }?>" readonly>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email" class="control-label">Email</label>
-                                <input type="email" name="email" id="email" class="form-control" required="required"/>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="firstname" class="control-label">First name</label>
-                                <input type="text" name="firstname" id="firstname" class="form-control" required="required"/>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="lastname" class="control-label">Last name</label>
-                                <input type="text" name="lastname" id="lastname" class="form-control" required="required"/>
-                            </div>
-                            
+							</div>
+							<div class="form-group">
+								<label for="public_com" class="control-label">Votre communauté publique:</label>
+								<input type="public_com" name="public_com" id="public_com" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="private_com" class="control-label">Votre communauté privée:</label>
+								<input type="private_com" name="private_com" id="private_com" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="syscontact" class="control-label">Votre adresse mail:</label>
+								<input type="syscontact" name="syscontact" id="syscontact" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="syslocation" class="control-label">Localisation de la machine:</label>
+								<input type="syslocation" name="syslocation" id="syslocation" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="service" class="control-label">Service à superviser:</label>
+								<input type="service" name="service" id="service" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="ins_max" class="control-label">Nombre d'instances minimum:</label>
+								<input type="ins_max" name="ins_max" id="ins_max" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="ins_min" class="control-label">Nombre d'instances maximum:</label>
+								<input type="ins_min" name="ins_min" id="ins_min" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="partition" class="control-label">Partition à superviser:</label>
+								<input type="partition" name="partition" id="partition" class="form-control" required="required"/>
+							</div>
+			
+							<div class="form-group">
+								<label for="charge" class="control-label">Charge maximale (en ko ou pourcentage):</label>
+								<input type="charge" name="charge" id="charge" class="form-control" required="required"/>
+							</div>
+			
 
                             <button type="submit" href="index.php?index=valid_contact" class="btn btn-primary pull-left">Valid profile</button>
                             </form>
