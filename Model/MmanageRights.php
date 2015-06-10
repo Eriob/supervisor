@@ -1,7 +1,7 @@
 <?php
 function manageUsers(){
 	
-	$sql = 'SELECT rights FROM users';
+	$sql = 'SELECT * FROM users';
 	
 	$request = mysql_query($sql) or die (mysql_error());
 
