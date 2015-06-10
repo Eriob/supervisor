@@ -4,6 +4,7 @@
 	if ($_GET['index'] == "discoverAll") {
 		if(isset($_SESSION['name'])) {
 			include('./Viewer/VdiscoverAll.php');
+			echo '</div></div>';
 		}
 	}elseif($_GET['index'] == "searchAll") {
 		if(isset($_SESSION['name'])) {
