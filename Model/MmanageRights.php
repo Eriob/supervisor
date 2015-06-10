@@ -30,7 +30,7 @@ function manageUsers(){
 					<div class="col-lg-1 col-md-1 col-xs-1">
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
-					<button type="submit" href="index.php?index=manageRights" class="btn btn-primary pull-left">Manage Users Status</button>
+					<button type="submit" href="index.php?index=manageRights" class="btn btn-primary pull-left">Manage Rights</button>
 					</form>
 					</div>
 			  </div>
