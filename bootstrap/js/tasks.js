@@ -1,4 +1,4 @@
-var Tasks = function () {
+/*var Tasks = function () {
 
 
     return {
@@ -16,4 +16,4 @@ var Tasks = function () {
 
     };
 
-}();
+}();*/
