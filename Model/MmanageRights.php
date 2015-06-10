@@ -44,6 +44,19 @@ function manageUsers(){
 	</div>
 	<!-- END FOOTER -->
 </div>
+<!-- BEGIN CORE PLUGINS -->
+<<script src="./bootstrap/js/jquery.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="./bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
 </body>
 
 <!-- END BODY -->
