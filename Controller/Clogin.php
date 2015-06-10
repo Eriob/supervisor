@@ -12,7 +12,7 @@
 				
 			sleep(1);
 		
-		function curPageURL() {
+		/*function curPageURL() {
 			$pageURL = strstr ( $_SERVER['HTTP_REFERER'] , '/');
 			return $pageURL;
 		}
@@ -28,7 +28,8 @@
 		}else{
 			$msg = "Mauvais mot de passe";
 			sleep(1);
-			header('location: index.php');		
+			header('location: index.php');*/
+			include('./Controller/Cindex.php');	
 		}	
 	}
 
