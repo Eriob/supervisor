@@ -36,6 +36,6 @@ function discoverAll() {
 	}
 
 		echo "<br><br><br><br><br>";
-		echo '</div><div class="clearfix"></div><div class="row"><div class="clearfix"></div></div></div></div></div>';
+		echo '</div><div class="clearfix"></div><div class="row"><div class="clearfix"></div></div></div></div></div></div></div>';
 }
 ?>
