@@ -11,7 +11,7 @@
 <script src="./bootstrap/js/jquery.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery-migrate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="./bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>
+<!--<script src="./bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>-->
 <script src="./bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery.slimscroll.min.js" type="text/javascript"></script>
