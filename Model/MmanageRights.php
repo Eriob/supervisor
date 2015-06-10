@@ -36,7 +36,18 @@ function manageUsers(){
 			  </div>
 			</div>
 		</div>
-	</div>';
+	</div><!-- BEGIN FOOTER -->
+	<div class="page-footer">
+		<div class="page-footer-inner">
+			 2015 &copy; SuperVisor by Alababa <a href="http://intechinfo.fr" title="Alababa Theme SupervisorS4" target="_blank">IN TECH INFO</a>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+</body>
+
+<!-- END BODY -->
+</html>';
 
 }
 ?>
