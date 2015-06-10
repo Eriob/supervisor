@@ -15,11 +15,13 @@ function manageUsers(){
 							
 
 	while($users = mysql_fetch_array($request)){
-		echo "<tr><td>".$users['username']."</td><td>";
-		if($users['ban'] == 0){echo "No";}else{echo "Yes";}
-		echo "</td></tr>";
-
+		if($users['ban'] == 0){
+			echo "<tr><td>".$users['username']."</td><td> No </td></tr>";
+		}else{
+			echo "<tr><td>".$users['username']."</td><td> Yes </td></tr>";
+		}
 	}
+
 		echo '</tbody></table></div>
 		   </div>"<div class="row">
 					<div class="col-lg-1 col-md-1 col-xs-1">
