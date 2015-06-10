@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `rights` int(11) unsigned NOT NULL,
+  `rights` varchar(30) NOT NULL,
   `ban` int(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -54,8 +54,8 @@ ALTER TABLE `notifications`
   ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`machine_id`) REFERENCES `machines` (`id`),
   ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-INSERT INTO `users` VALUES ('0', 'Alababa', 'Alan', 'Barthelemy', '21232f297a57a5a743894a0e4a801fc3', 'a@a.com', 'admin', '0');
-INSERT INTO `users` VALUES ('1', 'Zuzuwin', 'Julien', 'Cartier', '21232f297a57a5a743894a0e4a801fc3', 'a@a.com', 'admin', '1');
+INSERT INTO `users` VALUES ('0', 'Alababa', 'Alan', 'Barthelemy', '21232f297a57a5a743894a0e4a801fc3', 'a@a.com', 'administrator', '0');
+INSERT INTO `users` VALUES ('1', 'Zuzuwin', 'Julien', 'Cartier', '21232f297a57a5a743894a0e4a801fc3', 'a@a.com', 'user', '1');
 INSERT INTO `machines` VALUES ('1', 'Alababa-PC', '10.8.111.210', 'FA:3D:2F:3H:2D', 'Hewlett Packard');
 INSERT INTO `machines` VALUES ('2', 'Julien-PC', '10.8.109.142', 'F5:3D:3E:D9:G1', 'Hewlett Packard');
 INSERT INTO `machines` VALUES ('3', 'Simon-PC', '10.8.113.251', '0D:00:3K:6D:H9', 'Asus');

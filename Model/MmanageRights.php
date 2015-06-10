@@ -1,7 +1,7 @@
 <?php
 function manageUsers(){
 	
-	$sql = 'SELECT * FROM users';
+	$sql = 'SELECT rights FROM users';
 	
 	$request = mysql_query($sql) or die (mysql_error());
 
@@ -16,12 +16,12 @@ function manageUsers(){
 	while($users = mysql_fetch_array($request)){
 		if($users['rights'] == "user"){
 			echo "<tr><td>".$users['username']."</td><td>
-			<select><option value='user' name='ban".$users['username']."' autofocus> User </option>
+			<select><option value='user' name='ban".$users['username']."' selected> User </option>
 					<option value='administrator' name='ban".$users['username']."'> Administrator </option></select>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
 			<select><option value='user' name='ban".$users['username']."'> User </option>
-					<option value='administrator' name='ban".$users['username']."' autofocus> Administrator </option></select>";
+					<option value='administrator' name='ban".$users['username']."' selected> Administrator </option></select>";
 		}
 	}
 
