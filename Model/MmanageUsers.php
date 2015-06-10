@@ -6,23 +6,22 @@ function manageUsers(){
 	$request = mysql_query($sql) or die (mysql_error());
 
 	echo '<div class="row">
-					<div class="col-md-1 col-xs-1">
-					</div>
-					<div class="col-lg-10 col-md-10 col-xs-10">
-						<form class="form-horizontal" name="manage_users" method="POST" action="index.php?index=manageUsers">
-						<table class="table table-bordered">
-							<thead><tr><th>Nom utilisateur</th><th>Ban</th></tr></thead><tbody>';
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-lg-10 col-md-10 col-xs-10">
+				<form class="form-horizontal" name="manage_users" method="POST" action="index.php?index=manageUsers">
+				<table class="table table-bordered">
+				<thead><tr><th>Nom utilisateur</th><th>Ban</th></tr></thead><tbody>';
 							
 
 	while($users = mysql_fetch_array($request)){
 		if($users['ban'] == 0){
 			echo "<tr><td>".$users['username']."</td><td>
-			<input type='radio' name='ban' value='yes'>Yes
-			<input type='radio' name='ban' value='no' checked>No</td></tr>";
+			<input type='radio' name='ban' value='yes'> Yes 
+			<input type='radio' name='ban' value='no' checked> No </td></tr>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
-			<input type='radio' name='ban' value='yes' checked>Yes
-			<input type='radio' name='ban' value='no'>No</td></tr>";
+			<input type='radio' name='ban' value='yes' checked> Yes 
+			<input type='radio' name='ban' value='no'> No </td></tr>";
 		}
 	}
 
