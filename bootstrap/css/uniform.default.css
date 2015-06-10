@@ -150,7 +150,7 @@ div.checker {
 div.radio {
   position: relative; }
   div.radio, div.radio span, div.radio input {
-    width: 18px;
+    /*width: 18px;*/
     height: 18px; }
   div.radio span {
     display: -moz-inline-box;
