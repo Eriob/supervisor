@@ -12,7 +12,6 @@ include_once('./Controller/Cheader.php');
 include_once('./Controller/Cnavbar.php');
 
 
-
     if (isset ($_GET['index'])) {
         switch ($_GET['index']) {
             case "login":

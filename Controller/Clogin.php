@@ -9,8 +9,6 @@
 		if ($password == $login['password']) {
 			$_SESSION['name'] = $login['username'];
 			$_SESSION['id'] = $login['id'];
-				
-			sleep(1);
 		
 		/*function curPageURL() {
 			$pageURL = strstr ( $_SERVER['HTTP_REFERER'] , '/');
@@ -31,8 +29,6 @@
 			sleep(4);
 			include('./Controller/Cindex.php');
 
-    }
-}
 		}	
 	}
 
