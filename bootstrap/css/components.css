@@ -3384,7 +3384,7 @@ input[type="url"].spinner,
 input[type="search"].spinner,
 input[type="tel"].spinner,
 input[type="color"].spinner {
-  background-image: url("../img/input-spinner.gif") !important;
+  /*background-image: url("../img/input-spinner.gif") !important;*/
   background-repeat: no-repeat;
   background-position: right 8px;
 }
@@ -13781,19 +13781,19 @@ Purple Soft
   color: #FFFFFF;
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.remove {
-  /*background-image: url(../img/portlet-remove-icon-white.png);*/
+  background-image: url(../img/portlet-remove-icon-white.png);
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.config {
-  /*background-image: url(../img/portlet-config-icon-white.png);*/
+  background-image: url(../img/portlet-config-icon-white.png);
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.reload {
-  /*background-image: url(../img/portlet-reload-icon-white.png);*/
+  background-image: url(../img/portlet-reload-icon-white.png);
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.expand {
-  /*background-image: url(../img/portlet-expand-icon-white.png);*/
+  background-image: url(../img/portlet-expand-icon-white.png);
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.collapse {
-  /*background-image: url(../img/portlet-collapse-icon-white.png);*/
+  background-image: url(../img/portlet-collapse-icon-white.png);
 }
 .portlet.solid.purple-soft > .portlet-title > .tools > a.fullscreen {
   color: #fdfdfd;
