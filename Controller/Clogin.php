@@ -27,9 +27,12 @@
 		
 		}else{
 			$msg = "Mauvais mot de passe";
-			sleep(1);
 			header('location: index.php');*/
-			include('./Controller/Cindex.php');	
+			sleep(4);
+			include('./Controller/Cindex.php');
+
+    }
+}
 		}	
 	}
 
