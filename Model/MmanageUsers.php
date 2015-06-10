@@ -20,8 +20,8 @@ function manageUsers(){
 			<input type='radio' name='ban' value='no' checked> No </td></tr>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
-			<input type='radio' name='ban' value='yes' checked> Yes 
-			<input type='radio' name='ban' value='no'> No </td></tr>";
+			<input type='radio' name='ban".$users['username']."' value='yes' checked> Yes 
+			<input type='radio' name='ban".$users['username']."' value='no'> No </td></tr>";
 		}
 	}
 
