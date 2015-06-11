@@ -34,6 +34,11 @@ function manageUsers(){
 					</form>
 					</div>
 			  </div>
+			  <div class="row"><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
 			</div>
 		</div>
 	</div><!-- BEGIN FOOTER -->

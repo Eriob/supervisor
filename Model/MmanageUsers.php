@@ -36,8 +36,12 @@ function manageUsers(){
 					<div class="col-lg-5 col-md-5 col-xs-5">
 					<a href="index.php?index=createUser" class="btn btn-primary pull-left">Create New User</a>
 					</div>
-
 			  </div>
+			  <div class="row"><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
+			  <div class="row"><br><br><br><br><br></div>
 			</div>
 		</div>
 	</div>	<!-- BEGIN FOOTER -->
