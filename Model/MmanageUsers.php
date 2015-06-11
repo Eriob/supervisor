@@ -33,6 +33,10 @@ function manageUsers(){
 					<button type="submit" href="index.php?index=manageUsers" class="btn btn-primary pull-left">Manage Users Status</button>
 					</form>
 					</div>
+					<div class="col-lg-5 col-md-5 col-xs-5">
+					<a href="index.php?index=createUser" class="btn btn-primary pull-left">Create New User</a>
+					</div>
+
 			  </div>
 			</div>
 		</div>
@@ -60,6 +64,12 @@ function manageUsers(){
 </body>
 <!-- END BODY -->
 </html>';
+
+}
+
+function createNewUser($username, $password, $firstname, $lastname, $email){
+
+	$sql = 'INSERT INTO users VALUES("", "'.$username.'", "'.$firstname.'","'.$lastname.'","'.$password.'", "'.$email.'", "user", "0")';
 
 }
 ?>

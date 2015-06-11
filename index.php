@@ -76,6 +76,14 @@ include_once('./Controller/Cnavbar.php');
                 include('./Controller/CshowTraps.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
+            case "createUser":
+                include('./Controller/CcreateUser.php');
+                include_once('./Viewer/Vfooter.php');
+                break;
+            case "validNewUser":
+                include('./Controller/CcreateUser.php');
+                include_once('./Viewer/Vfooter.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 include_once('./Viewer/Vfooter.php');
