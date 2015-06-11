@@ -12,8 +12,8 @@
 					if ($_POST['password'] != $_POST['password2']) {
 						include('./Viewer/VcreateUser.php');
 					}else{
-						$password=md5($_POST['password']);
 						include('./Model/MmanageUsers.php');
+						$password=md5($_POST['password']);
 						createNewUser($_POST['username'], $password, $_POST['firstname'], $_POST['lastname'], $_POST['email']);
 						include('./Viewer/VmanageUsers.php');
 						manageUsers();

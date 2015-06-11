@@ -71,5 +71,6 @@ function createNewUser($username, $password, $firstname, $lastname, $email){
 
 	$sql = 'INSERT INTO users VALUES("", "'.$username.'", "'.$firstname.'","'.$lastname.'","'.$password.'", "'.$email.'", "user", "0")';
 
+	$request = mysql_query($sql) or die (mysql_error());
 }
 ?>

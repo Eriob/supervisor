@@ -59,7 +59,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" href="index.php?index=validNewUser" class="btn btn-primary pull-left">Create New User</button>
+                            <button type="submit" class="btn btn-primary pull-left">Create New User</button>
                             </form>
 
 

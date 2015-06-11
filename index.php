@@ -82,7 +82,6 @@ include_once('./Controller/Cnavbar.php');
                 break;
             case "validNewUser":
                 include('./Controller/CcreateUser.php');
-                include_once('./Viewer/Vfooter.php');
                 break;
             default:
                 include('./Controller/Cindex.php');
