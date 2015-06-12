@@ -74,7 +74,7 @@
 					?>
 						<a href="javascript:;">
 						<span class="glyphicon glyphicon-briefcase"></span>
-						<span class="title">Supervision</span>
+						<span class="title">Monitoring</span>
 						<?php
 						if(isset($_GET['index']) && $_GET['index'] == "ToDo"){
 							echo '<span class="selected"></span>';
