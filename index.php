@@ -4,13 +4,8 @@ session_start();
 
 header('Content-type: text/html; charset=UTF-8');
 
-if(!isset($_GET['index'])){
-    $_GET['index'] = "index";
-}
-
 include_once('./Controller/Cheader.php');
 include_once('./Controller/Cnavbar.php');
-
 
     if (isset ($_GET['index'])) {
         switch ($_GET['index']) {
@@ -89,7 +84,9 @@ include_once('./Controller/Cnavbar.php');
                 break;
         }   
     }else{
+        $_GET['index'] = "index";
         include_once('./Controller/Cindex.php');
+        include_once('./Viewer/Vfooter.php');
     }
 
 ?>
