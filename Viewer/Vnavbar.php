@@ -27,7 +27,7 @@
 						}
 						?>
 						</a>
-					</li>
+					</li><!--
 					<?php
 					if(isset($_GET['index']) && $_GET['index'] == "charts"){
 						echo '<li class="start active">';
@@ -46,7 +46,7 @@
 						?>
 						<span class="arrow "></span>
 						</a>
-					</li>
+					</li>-->
 					<?php
 					if(isset($_GET['index']) && $_GET['index'] == "aboutus"){
 						echo '<li class="start active">';

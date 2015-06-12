@@ -24,11 +24,9 @@
 		}
 		
 		}else{
-			$msg = "Mauvais mot de passe";
-			header('location: index.php');*/
+			$msg = "Mauvais mot de passe";*/
+			header('location: index.php');
 			sleep(4);
-			include('./Controller/Cindex.php');
-
 		}	
 	}
 

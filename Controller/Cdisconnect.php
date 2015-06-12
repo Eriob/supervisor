@@ -1,7 +1,7 @@
 <?php
 	session_destroy();
 	
-	//header('location: index.php');
+	header('location: index.php');
 	sleep(4);
-	include('./Controller/Cindex.php');
+	//include('./Controller/Cindex.php');
 ?>
