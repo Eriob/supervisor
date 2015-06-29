@@ -11,9 +11,14 @@ if (file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'"){
 	for($i = 0; $i < $total; $i++){
 		$tableau += $fichier[$i];
 	}
+
+	$open = fopen("hostname_'".$_GET['ip']."'.html", "w");
+	fwrite($open, $tableau); 
+	fclose($open);
+
 	return $tableau;
 }else{
-	sleep(20);
+	sleep(1);
 }
 
 ?>

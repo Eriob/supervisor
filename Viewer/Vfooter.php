@@ -32,6 +32,7 @@ function sendIp(ip, i) {
 , hwaccel: true // Whether to use hardware acceleration
 , position: 'absolute' // Element positioning
 }
+
 var s = "button"+i;
 var target = document.getElementById(s);
 var spinner = new Spinner(opts).spin(target);
@@ -44,6 +45,7 @@ $.get("index.php?index=explore" , {ip:ip} ).done(function (data)
     });
     
     //afficher le resultat
+    window.open('./hostname_'+ip+'.html','Informations','toolbar=no, menubar=no, scrollbars=no, top=100, left=200, width=300, height=200');
 
   });
 
