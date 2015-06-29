@@ -3,10 +3,10 @@
 $tableau="";
 
 if (file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'"){
-	if (isset($_GET['showIp'])) {
+	if (isset($_GET['index']) && $_GET['index'] == "showIp") {
 		include("./Viewer/Explored/hostname_'".$_GET['ip']."'.php'")
 	}
-	
+
 	$fichier = file("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'");
  
 	$total = count($fichier); // Nombre total des lignes du fichier
