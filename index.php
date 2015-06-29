@@ -79,15 +79,15 @@ include_once('./Controller/Cnavbar.php');
                 include('./Controller/CcreateUser.php');
                 break;
             case "explore":
-                include('./Controller/Cexplore.php');
+                include_once('./Controller/Cexplore.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
             case "showIp":
-                include('./Controller/CshowIp.php');
+                include_once('./Controller/CshowIp.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
             default:
-                include('./Controller/Cindex.php');
+                include_once('./Controller/Cindex.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
         }   
