@@ -5,11 +5,12 @@ function discoverAll() {
 	$request = mysql_query($sql) or die(mysql_error());
 	
 	$count = 0;
+	$i = 0;
 
 	while($discover = mysql_fetch_array($request)){
 		if($count %4 == 0) echo '<div class="row">';
 			echo '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<button  onclick="sendIp(\''.$discover['ip'].'\') " class="dashboard-discover dashboard-discover-light blue-soft" id="button">
+					<button  onclick="sendIp(\''.$discover['ip'].'\',\''.$i.'\') " class="dashboard-discover dashboard-discover-light blue-soft" id="button'.$i.'">
 					<div class="visual"></div>
 					<div class="details">
 						<div class="hostname">
@@ -29,6 +30,7 @@ function discoverAll() {
 
 				</div>';
 			$count++;
+			$i++;
 
 		if($count %4 == 0) echo '</div><br>';
 	}

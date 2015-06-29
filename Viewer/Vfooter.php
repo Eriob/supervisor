@@ -9,15 +9,58 @@
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <script>
 
-function sendIp(ip) {
-   alert(ip);
-   /*$.ajax({
-       url : 'sendip.php',
-       type : 'POST',
-       data : 'ip=' + ip,
-       dataType : 'html',
-       success : function(code_html, statut){}
-    });*/
+function sendIp(ip, i) {
+  var opts = {
+  lines: 11 // The number of lines to draw
+, length: 10 // The length of each line
+, width: 5 // The line thickness
+, radius: 10 // The radius of the inner circle
+, scale: 1 // Scales overall size of the spinner
+, corners: 1 // Corner roundness (0..1)
+, color: '#FFFFFF' // #rgb or #rrggbb or array of colors
+, opacity: 0.4 // Opacity of the lines
+, rotate: 53 // The rotation offset
+, direction: 1 // 1: clockwise, -1: counterclockwise
+, speed: 2 // Rounds per second
+, trail: 60 // Afterglow percentage
+, fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
+, zIndex: 2e9 // The z-index (defaults to 2000000000)
+, className: 'spinner' // The CSS class to assign to the spinner
+, top: '45%' // Top position relative to parent
+, left: '50%' // Left position relative to parent
+, shadow: true // Whether to render a shadow
+, hwaccel: true // Whether to use hardware acceleration
+, position: 'absolute' // Element positioning
+}
+var s = "button"+i;
+var target = document.getElementById(s);
+var spinner = new Spinner(opts).spin(target);
+
+$.get("index.php?index=explore" , {ip:ip} ).done(function (data)
+  {
+    // enlève le gif
+    $(s).hide("slow", function(){
+            alert("The result is now OK");
+    });
+    
+    //afficher le resultat
+
+  });
+
+//$(document).ready(function(){
+    //$(s).click(function(){
+        //alert("hhh")
+        //$(s).hide("slow", function(){
+            //alert("The script is GOOOOO UP");
+            //$.ajax({
+            //url : 'sendip.php',
+            //type : 'POST',
+            //data : 'ip=' + ip,
+            //dataType : 'html',
+            //success : function(code_html, statut){}
+        //});
+    //});
+//});
 }
 </script>
 
@@ -28,6 +71,7 @@ function sendIp(ip) {
 <!-- BEGIN CORE PLUGINS -->
 <!--<script src="./bootstrap/js/jquery.bpopup.js" type="text/javascript"></script>-->
 <script src="./bootstrap/js/jquery.min.js" type="text/javascript"></script>
+<script src="./bootstrap/js/spin.min.js" type="text/javascript"></script>
 <script src="./bootstrap/js/jquery-migrate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="./bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>

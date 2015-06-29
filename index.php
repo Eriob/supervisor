@@ -78,6 +78,9 @@ include_once('./Controller/Cnavbar.php');
             case "validNewUser":
                 include('./Controller/CcreateUser.php');
                 break;
+            case "explore":
+                include('./Controller/Cexplore.php');
+                break;
             default:
                 include('./Controller/Cindex.php');
                 include_once('./Viewer/Vfooter.php');
