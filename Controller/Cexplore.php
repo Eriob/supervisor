@@ -1,13 +1,13 @@
 <?php
 
-$string="";
+$string = "";
 
 $exec_script = sprintf('/var/www/supervisor/Scripts/host_explore.pl %s', $_GET['ip']);
 exec($exec_script);
 
 function fileCheck() {
 
-	if(file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'"){
+	if(file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'")){
 
 		$fichier = file("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'");
 	 
