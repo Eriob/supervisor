@@ -83,7 +83,7 @@ include_once('./Controller/Cnavbar.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
             case "showIp":
-                include('./Controller/Cexplore.php');
+                include('./Controller/CshowIp.php');
                 include_once('./Viewer/Vfooter.php');
                 break;
             default:
