@@ -48,21 +48,6 @@ $.get("index.php?index=explore" , {ip:ip} ).done(function (data)
     window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=750, height=350');
 
   });
-
-//$(document).ready(function(){
-    //$(s).click(function(){
-        //alert("hhh")
-        //$(s).hide("slow", function(){
-            //alert("The script is GOOOOO UP");
-            //$.ajax({
-            //url : 'sendip.php',
-            //type : 'POST',
-            //data : 'ip=' + ip,
-            //dataType : 'html',
-            //success : function(code_html, statut){}
-        //});
-    //});
-//});
 }
 </script>
 
