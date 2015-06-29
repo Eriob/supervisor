@@ -1,4 +1,15 @@
 <?php
+
+function showUsers(){
+
+	$sql = 'SELECT * FROM users';
+	
+	$request = mysql_query($sql) or die (mysql_error());
+
+	$users = mysql_fetch_array($request);
+
+}
+
 function manageUsers(){
 	
 	$sql = 'SELECT * FROM users';

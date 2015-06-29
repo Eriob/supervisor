@@ -68,7 +68,7 @@ if (@ARGV){
 
                                         print "Constructeur: ".$constructeur;
                                         print WR $a.$b.$mac."\n";
-                                        print WR "Constructeur: ".$constructeur;
+                                        print WR "Constructeur: ".$constructeur."\n";
                                 }
                         }
 
@@ -104,26 +104,24 @@ if (@ARGV){
                                 if($save[$i] =~ m/^Running/){
                                         $flag_OS = $flag_OS+1;
                                         my ($a, @os) = split(" +", $save[$i]);
-                                        print "OS: ";
-                                        print WR "OS: ";
 
                                         for(my $j=0; $j < @os; $j=$j+1){
                                                 if($os[$j] =~ m/Windows/){
                                                         my $windows = "Windows 7\n";
-                                                        print $windows;
-                                                        print WR $windows;
+                                                        print "OS: ".$windows."\n";
+                                                        print WR "OS : ".$windows."\n";
                                                         $flag_OS = $flag_OS+1;
                                                 }
                                                 if($os[$j] =~ m/Linux/){
                                                         my $linux = "Linux 2.6\n";
-                                                        print $linux;
-                                                        print WR $linux;
+                                                        print "OS: ".$linux."\n";
+                                                        print WR "OS: ".$linux."\n";
                                                         $flag_OS = $flag_OS+1;
                                                 }
                                         }
                                         if($flag_OS == 0){
-                                                print @os;
-                                                print WR @os;
+                                                print @os."\n";
+                                                print WR @os."\n";
                                         }
                                 }else{
                                         if($flag_OS == 0){

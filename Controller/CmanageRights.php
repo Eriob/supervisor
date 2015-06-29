@@ -1,8 +1,12 @@
 <?php
 	include('./Model/MconnectBDD.php');
+	include ('./Model/MmanageRights.php');
 
 	if (isset($_SESSION['name'])) {
-		include ('./Model/MmanageRights.php');
+		if ($_GET['index'] == "changeRights") {
+
+		}
+
 		include ('./Viewer/VmanageRights.php');
 		manageUsers();
 	}else{
