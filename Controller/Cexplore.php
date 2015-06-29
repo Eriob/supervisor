@@ -1,6 +1,6 @@
 <?php
 
-$string = "";
+$string ="";
 
 $exec_script = sprintf('/var/www/supervisor/Scripts/host_explore.pl %s', $_GET['ip']);
 exec($exec_script);
