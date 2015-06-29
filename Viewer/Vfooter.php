@@ -45,7 +45,7 @@ $.get("index.php?index=explore" , {ip:ip} ).done(function (data)
     });
     
     //afficher le resultat
-    window.open('/var/www/supervisor/Viewer/Explored/hostname_'+ip+'.html','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=400, width=350, height=350');
+    window.open('/var/www/supervisor/Viewer/Explored/hostname_'+ip+'.html','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=600, width=850, height=350');
 
   });
 
