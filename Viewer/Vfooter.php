@@ -39,13 +39,11 @@ var spinner = new Spinner(opts).spin(target);
 
 $.get("index.php?index=explore" , {ip:ip} ).done(function (data)
   {
-    // enlève le gif
-    $(s).hide("slow", function(){
-            alert("The result is now OK");
-    });
+    //on enlève le gif
+    $(s).hide("slow");
     
     //afficher le resultat
-    window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=750, height=350');
+    window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=550, height=350');
 
   });
 }
