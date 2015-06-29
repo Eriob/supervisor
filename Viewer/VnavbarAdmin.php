@@ -185,7 +185,7 @@
 						}else{
 						}
 						?>
-						<span class="arrow "></span>
+						<span class="arrow"></span>
 						</a>
 						<ul class="sub-menu">
 							<li>

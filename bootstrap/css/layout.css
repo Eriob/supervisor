@@ -1319,7 +1319,7 @@ Page sidebar
   .page-sidebar-menu.page-sidebar-menu-hover-submenu > li:hover > a > .arrow {
     z-index: 1;
     right: 0px;
-    margin-top: -36px;
+    margin-top: -31px;
   }
   .page-fontawesome .page-sidebar-menu.page-sidebar-menu-hover-submenu > li:hover > a > .arrow {
     margin-top: -34px;
@@ -1405,7 +1405,7 @@ Page sidebar
     right: 25px;
     width: 0;
     height: 0;
-    top: 50px;
+    top: 55px;
     border-bottom: 15px solid #5f646b;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
