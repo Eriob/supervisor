@@ -80,9 +80,11 @@ include_once('./Controller/Cnavbar.php');
                 break;
             case "explore":
                 include('./Controller/Cexplore.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             case "showIp":
                 include('./Controller/Cexplore.php');
+                include_once('./Viewer/Vfooter.php');
                 break;
             default:
                 include('./Controller/Cindex.php');
