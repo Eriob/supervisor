@@ -1,7 +1,7 @@
 <?php
 
 //CONNEXION A MYSQL
-mysql_connect('localhost', 'root', 'secret')
+mysql_connect('localhost', 'root', '')
 or die ('ERROR TO CONNECT WITH DATABASE');
 
 //SELECTION DE LA BDD

@@ -12,7 +12,7 @@ if (file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'"){
 		$tableau += $fichier[$i];
 	}
 
-	$open = fopen("hostname_'".$_GET['ip']."'.html", "w");
+	$open = fopen("/var/www/supervisor/Viewer/Explored/hostname_'".$_GET['ip']."'.html", "w");
 	fwrite($open, $tableau); 
 	fclose($open);
 

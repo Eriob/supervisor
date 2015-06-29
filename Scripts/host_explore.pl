@@ -27,11 +27,11 @@ if (@ARGV){
                 if($ARGV[0] eq $ip){
                         @cmd = `nmap -T5 -O $ARGV[0]`;
 
-                        open(WR,">hostname_".$ARGV[0].".txt")||die("Vous ne pouvez pas créer le fichier");
+                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas créer le fichier");
                         print WR "@cmd";
                         close(WR);
 
-                        open(RD,"<hostname_".$ARGV[0].".txt")||die("Vous ne pouvez pas ouvrir le fichier");
+                        open(RD,"</var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas ouvrir le fichier");
                         @save = <RD>;
                         shift(@save);
                         shift(@save);
@@ -40,8 +40,9 @@ if (@ARGV){
                         shift(@save);
                         close(RD);
 
-                        open(WR,">hostname_".$ARGV[0].".txt")||die("Vous ne pouvez pas ouvrir le fichier");
+                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas ouvrir le fichier");
 
+                        print "<body>\n";
                         print "IP: " . $ARGV[0] ."\n";
                         print WR "IP: " . $ARGV[0] . "\n";
 
@@ -66,7 +67,7 @@ if (@ARGV){
                                                 #On fait rien
                                         }
 
-                                        print "Constructeur: ".$constructeur;
+                                        print "Constructeur: ".$constructeur."\n";
                                         print WR $a.$b.$mac."\n";
                                         print WR "Constructeur: ".$constructeur."\n";
                                 }
@@ -156,6 +157,8 @@ if (@ARGV){
                                 print "OS: Non défini\n";
                                 print WR "OS: Non défini\n";
                         }
+
+                        print "</body>\n"
                 }
         }
 }else{
