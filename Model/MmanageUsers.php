@@ -16,12 +16,12 @@ function manageUsers(){
 	while($users = mysql_fetch_array($request)){
 		if($users['ban'] == 0){
 			echo "<tr><td>".$users['username']."</td><td>
-			<input type='radio' name='ban".$users['username']."' value='yes'> Yes 
-			<input type='radio' name='ban".$users['username']."' value='no'checked> No </td></tr>";
+			<input type='radio' name='ban-".$users['username']."' value='yes'> Yes 
+			<input type='radio' name='ban-".$users['username']."' value='no'checked> No </td></tr>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
-			<input type='radio' name='ban".$users['username']."' value='yes' checked> Yes 
-			<input type='radio' name='ban".$users['username']."' value='no'> No </td></tr>";
+			<input type='radio' name='ban-".$users['username']."' value='yes' checked> Yes 
+			<input type='radio' name='ban-".$users['username']."' value='no'> No </td></tr>";
 		}
 	}
 
@@ -30,7 +30,7 @@ function manageUsers(){
 					<div class="col-lg-1 col-md-1 col-xs-1">
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
-					<button type="submit" href="index.php?index=manageUsers" class="btn btn-primary pull-left">Manage Users Status</button>
+					<button type="submit" href="index.php?index=changeUsers" class="btn btn-primary pull-left">Manage Users Status</button>
 					</form>
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">

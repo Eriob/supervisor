@@ -176,7 +176,7 @@
 					?>
 						<a href="javascript:;">
 						<span class="glyphicon glyphicon-wrench"></span>
-						<span class="title">Options</span>
+						<span class="title">Settings</span>
 						<?php
 						if(isset($_GET['index']) && $_GET['index'] == "manageRights"){
 							echo '<span class="selected"></span>';

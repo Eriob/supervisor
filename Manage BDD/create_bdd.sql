@@ -51,7 +51,6 @@ ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`recipient`) REFERENCES `users` (`id`);
  
 ALTER TABLE `notifications`
-  ADD CONSTRAINT `notifications_ibfk_2` FOREIGN KEY (`machine_id`) REFERENCES `machines` (`id`),
   ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 INSERT INTO `users` VALUES ('0', 'Alababa', 'Alan', 'Barthelemy', '21232f297a57a5a743894a0e4a801fc3', 'a@a.com', 'administrator', '0');

@@ -17,11 +17,11 @@ function manageUsers(){
 		if($users['rights'] == "user"){
 			echo "<tr><td>".$users['username']."</td><td>
 			<select><option value='user' name='rights".$users['username']."' selected> User </option>
-					<option value='administrator' name='rights".$users['username']."'> Administrator </option></select>";
+					<option value='administrator' name='rights-".$users['username']."'> Administrator </option></select>";
 		}else{
 			echo "<tr><td>".$users['username']."</td><td>
 			<select><option value='user' name='rights".$users['username']."'> User </option>
-					<option value='administrator' name='rights".$users['username']."' selected> Administrator </option></select>";
+					<option value='administrator' name='rights-".$users['username']."' selected> Administrator </option></select>";
 		}
 	}
 
@@ -30,7 +30,7 @@ function manageUsers(){
 					<div class="col-lg-1 col-md-1 col-xs-1">
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
-					<button type="submit" href="index.php?index=manageRights" class="btn btn-primary pull-left">Manage Rights</button>
+					<button type="submit" href="index.php?index=changeRights" class="btn btn-primary pull-left">Manage Rights</button>
 					</form>
 					</div>
 			  </div>
