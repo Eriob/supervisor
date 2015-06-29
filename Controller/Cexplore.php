@@ -2,9 +2,10 @@
 
 $tableau="";
 
-if (isset($_GET['index']) && $_GET['index'] == "showIp") {
-	include("./Viewer/Explored/hostname_'".$_GET['ip']."'.php'");
-	
+if ($_GET['index'] == "showIp") {
+	include("./Viewer/Explored/hostname_10.8.96.1.php'");
+	//include("./Viewer/Explored/hostname_'".$_GET['ip']."'.php'");
+
 }else if(file_exists("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'"){
 
 	$fichier = file("/var/www/supervisor/Scripts/hostname_'".$_GET['ip']."'.txt'");
