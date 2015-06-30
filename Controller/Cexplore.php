@@ -5,16 +5,4 @@ exec($exec_script);
 
 sleep(1);
 
-/*function fileCheck() {
-
-	if(file_exists("/var/www/supervisor/Viewer/Explored/hostname_'".$_GET['ip']."'.php'")){
-		exit;
-	}else{
-		sleep(10);
-		fileCheck();
-	}
-}
-
-fileCheck();*/
-
 ?>
