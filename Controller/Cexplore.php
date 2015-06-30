@@ -11,7 +11,6 @@ function fileCheck() {
 		sleep(20);
 		fileCheck();
 	}
-
 }
 
 fileCheck();
