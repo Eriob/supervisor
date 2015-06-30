@@ -37,12 +37,12 @@ var s = "button"+i;
 var target = document.getElementById(s);
 var spinner = new Spinner(opts).spin(target);
 
-  $.get("index.php?index=explore" , {ip:ip} ).done(function (data){
+  $.get("../Controller/Cexplore.php" , {ip:ip} ).done(function (data){
     //on enlève le gif
     $(s).hide(1000, function(){
             //afficher le resultat
             window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=550, height=350');
-    });(s).hide();
+    });
   });
 }
 </script>
