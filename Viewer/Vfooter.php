@@ -38,9 +38,9 @@ var target = document.getElementById(s);
 var spinner = new Spinner(opts).spin(target);
 
 $.get("index.php?index=explore" , {ip:ip} ).done(function (data)
-  {
+{
     //on enlève le gif
-    $(s).hide("slow");
+    $("s").hide("slow");
     
     //afficher le resultat
     window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=550, height=350');
