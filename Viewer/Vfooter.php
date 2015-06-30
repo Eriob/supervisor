@@ -39,10 +39,7 @@ var spinner = new Spinner(opts).spin(target);
 
   $.get("index.php?index=explore",{ip:ip}).done(function( data ){
     //on enlève le gif
-    $(s).hide(100, function(){
-            //afficher le resultat
-            alart("Yeaaah");
-    });
+    var spinner = new Spinner(opts).stop(target);
     window.open('index.php?index=showIp&ip='+ip+'','Informations','toolbar=no, menubar=no, scrollbars=no, top=200, left=500, width=550, height=350');
   });
 }
