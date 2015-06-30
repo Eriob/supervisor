@@ -4,7 +4,7 @@ session_start();
 
 header('Content-type: text/html; charset=UTF-8');
 
-if ($_GET['index'] == "showIp") {
+if (isset($_GET['index']) && $_GET['index'] == "showIp") {
     include_once('./Controller/CshowIp.php');
 }else{
     include_once('./Controller/Cheader.php');
