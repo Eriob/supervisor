@@ -19,19 +19,19 @@ my $windows = 0;
 my $linux = 0;
 
 if (@ARGV){
-        open(RD,"<scan.txt")||die("Vous ne pouvez pas ouvrir le fichier");
+        sudo open(RD,"<scan.txt")||die("Vous ne pouvez pas ouvrir le fichier");
         @save = <RD>;
 
         foreach $ligne (@save){
-                my ($ip, $mac, $constructeur) = split (" / ", $ligne);
+                my ($ip, $mac, $constructeur) = sudo split (" / ", $ligne);
                 if($ARGV[0] eq $ip){
                         @cmd = `nmap -T5 -O $ARGV[0]`;
 
-                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas créer le fichier");
+                        sudo open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas créer le fichier");
                         print WR "@cmd";
                         close(WR);
 
-                        open(RD,"</var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
+                        sudo open(RD,"</var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
                         @save = <RD>;
                         shift(@save);
                         shift(@save);
@@ -40,7 +40,7 @@ if (@ARGV){
                         shift(@save);
                         close(RD);
 
-                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
+                        sudo open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
 
                         print "IP: " . $ARGV[0] ."\n";
                         print WR "<br>IP : " . $ARGV[0] . "</br>\n";
@@ -50,7 +50,7 @@ if (@ARGV){
                                 $save[$i] =~ s/^ +//;
 
                                 if($save[$i] =~ m/^MAC/){
-                                        my ($a, $b, $mac, $constructeur) = split(" +", $save[$i]);
+                                        my ($a, $b, $mac, $constructeur) = sudo split(" +", $save[$i]);
                                         $constructeur =~ s/[()]//g;
                                         #$a = chaine "MAC" $c = "ADRESSE MAC"
                                         print $a.": ".$mac."\n";
@@ -103,7 +103,7 @@ if (@ARGV){
                                 $save[$i] =~ s/^ +//;
                                 if($save[$i] =~ m/^Running/){
                                         $flag_OS = $flag_OS+1;
-                                        my ($a, @os) = split(" +", $save[$i]);
+                                        my ($a, @os) = sudo split(" +", $save[$i]);
 
                                         for(my $j=0; $j < @os; $j=$j+1){
                                                 if($os[$j] =~ m/Windows/){
@@ -127,8 +127,8 @@ if (@ARGV){
                                         if($flag_OS == 0){
                                                 if($save[$i] =~ m/^OS/){
                                                         $flag_OS = $flag_OS+1;
-                                                        my ($a, $b, $c) = split(" +", $save[$i]);
-                                                        my ($d, $e, $f, $os) = split(":", $c);
+                                                        my ($a, $b, $c) = sudo split(" +", $save[$i]);
+                                                        my ($d, $e, $f, $os) = sudo split(":", $c);
                                                         print "OS: ".$os."\n";
                                                         print WR "<br>OS : ".$os."</br>\n";
                                                 }
