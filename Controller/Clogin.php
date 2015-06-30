@@ -25,7 +25,6 @@
 		
 		}else{
 			$msg = "Mauvais mot de passe";*/
-			session_start();
 			header('location: index.php');
 		}	
 	}
