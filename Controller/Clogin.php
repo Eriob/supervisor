@@ -26,6 +26,7 @@
 		}else{
 			$msg = "Mauvais mot de passe";*/
 			session_start();
+			sleep(2);
 			include_once('./Controller/Cheader.php');
 			include_once('./Controller/Cnavbar.php');
 			include_once('./Controller/Cindex.php');
