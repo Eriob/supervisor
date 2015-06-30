@@ -27,11 +27,11 @@ if (@ARGV){
                 if($ARGV[0] eq $ip){
                         @cmd = `nmap -T5 -O $ARGV[0]`;
 
-                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas créer le fichier");
+                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas créer le fichier");
                         print WR "@cmd";
                         close(WR);
 
-                        open(RD,"</var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas ouvrir le fichier");
+                        open(RD,"</var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
                         @save = <RD>;
                         shift(@save);
                         shift(@save);
@@ -40,11 +40,10 @@ if (@ARGV){
                         shift(@save);
                         close(RD);
 
-                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".html")||die("Vous ne pouvez pas ouvrir le fichier");
+                        open(WR,">/var/www/supervisor/Viewer/Explored/hostname_".$ARGV[0].".php")||die("Vous ne pouvez pas ouvrir le fichier");
 
-                        print "<body>\n";
                         print "IP: " . $ARGV[0] ."\n";
-                        print WR "IP: " . $ARGV[0] . "\n";
+                        print WR "<br>IP : " . $ARGV[0] . "</br>\n";
 
                         # Verification adresse MAC
                         for(my $i=0; $i < @save-5; $i=$i+1){
@@ -68,8 +67,8 @@ if (@ARGV){
                                         }
 
                                         print "Constructeur: ".$constructeur."\n";
-                                        print WR $a.$b.$mac."\n";
-                                        print WR "Constructeur: ".$constructeur."\n";
+                                        print WR "<br>".$a." : ".$mac."</br>\n";
+                                        print WR "<br>Constructeur : ".$constructeur."</br>\n";
                                 }
                         }
 
@@ -79,7 +78,8 @@ if (@ARGV){
 
                                 if($save[$i] =~ m/^[0-9]/){
                                         print $save[$i];
-                                        print WR $save[$i];
+                                        chomp($save[$i]);
+                                        print WR "<br>".$save[$i]."</br>\n";
                                 }
                         }
 
@@ -93,10 +93,9 @@ if (@ARGV){
                                 #       print WR "Type: Phone\n";
                                 #}
                         }
-
                         if($flag_device==0){
                                 print "Type: PC\n";
-                                print WR "Type: PC\n";
+                                print WR "<br>Type : PC</br>\n";
                         }
 
                         # Verification de l'OS
@@ -108,21 +107,21 @@ if (@ARGV){
 
                                         for(my $j=0; $j < @os; $j=$j+1){
                                                 if($os[$j] =~ m/Windows/){
-                                                        my $windows = "Windows 7\n";
+                                                        my $windows = "Windows 7";
                                                         print "OS: ".$windows."\n";
-                                                        print WR "OS : ".$windows."\n";
+                                                        print WR "<br>OS : ".$windows."</br>\n";
                                                         $flag_OS = $flag_OS+1;
                                                 }
                                                 if($os[$j] =~ m/Linux/){
-                                                        my $linux = "Linux 2.6\n";
+                                                        my $linux = "Linux 2.6";
                                                         print "OS: ".$linux."\n";
-                                                        print WR "OS: ".$linux."\n";
+                                                        print WR "<br>OS : ".$linux."</br>\n";
                                                         $flag_OS = $flag_OS+1;
                                                 }
                                         }
                                         if($flag_OS == 0){
                                                 print @os."\n";
-                                                print WR @os."\n";
+                                                print WR "<br>".@os."</br>\n";
                                         }
                                 }else{
                                         if($flag_OS == 0){
@@ -131,7 +130,7 @@ if (@ARGV){
                                                         my ($a, $b, $c) = split(" +", $save[$i]);
                                                         my ($d, $e, $f, $os) = split(":", $c);
                                                         print "OS: ".$os."\n";
-                                                        print WR "OS: ".$os."\n";
+                                                        print WR "<br>OS : ".$os."</br>\n";
                                                 }
                                         }
                                 }
@@ -143,22 +142,21 @@ if (@ARGV){
                                         if($save[$i] =~ m/Linux/){
                                                 $flag_OS = $flag_OS+1;
                                                 print "OS: Linux\n";
-                                                print WR "OS: Linux\n";
+                                                print WR "<br>OS : Linux</br>\n";
                                         }
                                         if($save[$i] =~ m/Windows/){
                                                 $flag_OS = $flag_OS+1;
                                                 print "OS: Windows\n";
-                                                print WR "OS: Windows\n";
+                                                print WR "<br>OS : Windows</br>\n";
                                         }
                                 }
                         }
 
                         if($flag_OS==0){
                                 print "OS: Non défini\n";
-                                print WR "OS: Non défini\n";
+                                print WR "<br>OS: Non défini</br>\n";
                         }
 
-                        print "</body>\n"
                 }
         }
 }else{
