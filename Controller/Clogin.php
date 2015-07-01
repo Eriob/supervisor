@@ -27,10 +27,10 @@
 			$msg = "Mauvais mot de passe";*/
 			session_start();
 			sleep(2);
-			include_once('./Controller/Cheader.php');
-			include_once('./Controller/Cnavbar.php');
-			include_once('./Controller/Cindex.php');
-			//header('location: index.php');
+			include_once('./Viever/VheaderUser.php');
+			include_once('./Viewer/VnavbarAdmin.php');
+			include_once('./Viever/Vindex.php');
+			include_once('./Viewer/Vfooter.php');
 		}	
 	}
 
