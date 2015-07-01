@@ -71,7 +71,9 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 0,041ms
+								 <?php
+								 echo $informations['responsetime'];
+								 ?>
 							</div>
 							<div class="desc">
 								 Response Time
