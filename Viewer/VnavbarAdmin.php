@@ -58,8 +58,8 @@
 							<!--<li>
 								<a href="index.php?index=discoverOne">
 								<span class="glyphicon glyphicon-zoom-in"></span> One Host</a>
-							</li>-->
-						</ul>
+							</li>
+						</ul>-->
 					</li>
 					<?php
 					if(isset($_GET['index']) && $_GET['index'] == "ToDo"){
