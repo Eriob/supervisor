@@ -37,7 +37,7 @@
 						echo '<li>';
 					}
 					?>
-						<a href="javascript:;">
+						<a href="index.php?index=discoverAll">
 						<span class="glyphicon glyphicon-globe"></span>
 						<span class="title">Discover</span>
 						<?php
@@ -50,11 +50,11 @@
 						?>
 						<span class="arrow "></span>
 						</a>
-						<ul class="sub-menu">
+						<!--<ul class="sub-menu">
 							<li>
 								<a href="index.php?index=discoverAll">
 								<span class="glyphicon glyphicon-th-list"></span> All Hosts</a>
-							</li>
+							</li>-->
 							<!--<li>
 								<a href="index.php?index=discoverOne">
 								<span class="glyphicon glyphicon-zoom-in"></span> One Host</a>
