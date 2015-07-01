@@ -46,6 +46,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `ban` int(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `informations` (
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `connected` int(11) NOT NULL,
+  `lostpaquet` int(11) NOT NULL,
+  `avalability` int(11) NOT NULL,
+  `responsetime` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
  
 ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`recipient`) REFERENCES `users` (`id`);

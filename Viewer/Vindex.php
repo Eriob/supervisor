@@ -27,7 +27,9 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 64
+								 <?php
+								 echo $informations['connected'];
+								 ?>
 							</div>
 							<div class="desc">
 								 Connected
