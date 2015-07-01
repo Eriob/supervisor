@@ -43,10 +43,10 @@
 						<?php
 						if(isset($_GET['index']) && $_GET['index'] == "discoverAll"){
 							echo '<span class="selected"></span>';
-						}else if(isset($_GET['index']) && $_GET['index'] == "discoverOne"){
+						}/*else if(isset($_GET['index']) && $_GET['index'] == "discoverOne"){
 							echo '<span class="selected"></span>';
 						}else{
-						}
+						}*/
 						?>
 						<span class="arrow "></span>
 						</a>
@@ -55,10 +55,10 @@
 								<a href="index.php?index=discoverAll">
 								<span class="glyphicon glyphicon-th-list"></span> All Hosts</a>
 							</li>
-							<li>
+							<!--<li>
 								<a href="index.php?index=discoverOne">
 								<span class="glyphicon glyphicon-zoom-in"></span> One Host</a>
-							</li>
+							</li>-->
 						</ul>
 					</li>
 					<?php
