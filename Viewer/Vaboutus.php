@@ -12,7 +12,7 @@
                             <span class="glyphicon glyphicon-chevron-right"></i>
                         </li>
                         <li>
-                            <a href="index.php?index=aboutus">About Us</a>
+                            <a href="index.php?index=aboutus">About Us And me</a>
                         </li>
                     </ul>
                     <div class="page-toolbar">
