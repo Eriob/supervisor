@@ -34,52 +34,62 @@
 							</div>
 							<div class="form-group">
 								<label for="public_com" class="control-label">Your public community:</label>
-								<input type="public_com" name="public_com" id="public_com" class="form-control" required="required"/>
+								<input type="public_com" name="public_com" id="public_com" class="form-control"value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>" required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="private_com" class="control-label">Your private community:</label>
-								<input type="private_com" name="private_com" id="private_com" class="form-control" required="required"/>
+								<input type="private_com" name="private_com" id="private_com" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?> required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syscontact" class="control-label">System admin's mail:</label>
-								<input type="syscontact" name="syscontact" id="syscontact" class="form-control" required="required"/>
+								<input type="syscontact" name="syscontact" id="syscontact" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syslocation" class="control-label">System location:</label>
-								<input type="syslocation" name="syslocation" id="syslocation" class="form-control" required="required"/>
+								<input type="syslocation" name="syslocation" id="syslocation" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>required="required"/>
 							</div>
 							
-							<div class="form-group" >
+						
 							<form name="addService">
+								<div class="form-group" >
 								<br><label for="nom" class="control-label">Process to supervise:</label>
 								<input id="nom" type="text" name="nom" />
+								</div>
+
+								<div class="form-group" >
 								<br><label for="nom" class="control-label">Maximum instances:</label>
 								<input id="minimum" type="text" name="minimum" />
+								</div>
+								
+								<div class="form-group" >
 								<br><label for="nom" class="control-label">Minimum instances:</label>
 								<input id="maximum" type="text" name="maximum" />
+								</div>
 								<br>
 							</form>
 							<button type="button" id="btnAddForm" onclick="CloneForm('addService');">Add another process</button>
 							<br>	
 			
 							<div class="form-group" >
-							<form name="addService">
+							<form name="addDisk">
+								<div class="form-group" >
 								<br><label for="nom" class="control-label">Name of the disk to supervise:</label>
 								<input id="nom" type="text" name="nom" />
+								</div>
+								
+								<div class="form-group" >
 								<br><label for="nom" class="control-label">Maximum load:</label>
 								<input id="minimum" type="text" name="minimum" />
-								<br>
+								<br></div>
 							</form>
-							<button type="button" id="btnAddForm" onclick="CloneForm('addService');">Add another disk</button>
+							<button type="button" id="btnAddForm" onclick="CloneForm('addDisk');">Add another disk</button>
 							<br>	
 			
 
                             <button type="submit" href="index.php?index=valid_contact" class="btn btn-primary pull-left">Valid profile</button>
-                            </form>
-                        </div>
                         </div>
                         <br><br><br><br><br><br><br><br><br>
                     </div>
