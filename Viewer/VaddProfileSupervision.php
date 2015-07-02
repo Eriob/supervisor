@@ -89,7 +89,7 @@
 							<br>	
 			
 
-                            <button type="submit" href="index.php?index=valid_contact" class="btn btn-primary pull-left">Valid profile</button>
+                            <button type="submit" href="index.php?addProfileSupervision" class="btn btn-primary pull-left">Valid profile</button>
                         </div>
                         <br><br><br><br><br><br><br><br><br>
                     </div>
