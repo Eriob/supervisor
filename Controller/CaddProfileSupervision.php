@@ -48,7 +48,7 @@ if (isset($_POST['charge'])&& ($_POST['charge']!= '')){
 		$charge = $_POST['charge'];
 	}
 
-if (isset($public_com, $private_com, $syscontact, $syslocation, $service, $ins_min, $ins_max, $partition, $charge){
+if (isset($public_com, $private_com, $syscontact, $syslocation, $service, $ins_min, $ins_max, $partition, $charge)){
 	$snmpd_conf = fopen('snmpd.conf', 'w');
 	addSupervision($_SESSION['id'], $public_com, $private_com, $syscontact, $syslocation);	
 	$superv_id = get_id($_SESSION['id']);
