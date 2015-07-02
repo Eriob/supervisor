@@ -8,6 +8,7 @@
 	else{
 		include('./Controller/Cindex.php');
 	}
+	var_dump($_POST);
 	
 	$snmpd_conf = fopen('snmpd.conf', 'w');
 
