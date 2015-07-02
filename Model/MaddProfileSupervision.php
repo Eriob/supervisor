@@ -8,14 +8,14 @@ function get_id ($user_id){
 function get_services ($id){
 	$sql = "SELECT name, minimum, maximum FROM services WHERE supervision_id = '$id'";
 	$request = mysql_query($sql) or die (mysql_error());
-	$result = mysql_fetch_array($request)
+	$result = mysql_fetch_array($request);
 	return $result;
 }
 
 function get_disks ($id){
 	$sql = "SELECT name, charge FROM services WHERE supervision_id = '$id'";
 	$request = mysql_query($sql) or die (mysql_error());
-	$result = mysql_fetch_array($request)
+	$result = mysql_fetch_array($request);
 	return $result;
 }
 
