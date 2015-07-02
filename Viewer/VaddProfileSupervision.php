@@ -34,22 +34,22 @@
 							</div>
 							<div class="form-group">
 								<label for="public_com" class="control-label">Your public community:</label>
-								<input type="public_com" name="public_com" id="public_com" class="form-control"value="<?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>" required="required"/>
+								<input type="public_com" name="public_com" id="public_com" class="form-control"value="<?php if(isset($superv_id['public_com'])){echo $superv_id['public_com'];}?>" required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="private_com" class="control-label">Your private community:</label>
-								<input type="private_com" name="private_com" id="private_com" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?> required="required"/>
+								<input type="private_com" name="private_com" id="private_com" class="form-control" <?php if(isset($superv_id['private_com'])){echo $superv_id['private_com'];}?> required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syscontact" class="control-label">System admin's mail:</label>
-								<input type="syscontact" name="syscontact" id="syscontact" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>required="required"/>
+								<input type="syscontact" name="syscontact" id="syscontact" class="form-control" <?php if(isset($superv_id['admin_mail'])){echo $superv_id['admin_mail'];}?>required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syslocation" class="control-label">System location:</label>
-								<input type="syslocation" name="syslocation" id="syslocation" class="form-control" <?php if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>required="required"/>
+								<input type="syslocation" name="syslocation" id="syslocation" class="form-control" <?php if(isset($superv_id['syslocation'])){echo $superv_id['syslocation'];}?>required="required"/>
 							</div>
 							
 						
