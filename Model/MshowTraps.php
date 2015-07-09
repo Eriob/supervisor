@@ -1,5 +1,5 @@
 <?php
-function get_traps ($user_id){
+function get_traps (){
 	$sql = "SELECT id, machine_id, date_received, content, action FROM notifications WHERE user_id = '1'";
 	$request = mysql_query($sql) or die (mysql_error());
 	$result = mysql_fetch_array($request);
