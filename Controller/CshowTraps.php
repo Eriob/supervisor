@@ -1,10 +1,10 @@
 <?php
 	include('./Model/MconnectBDD.php');
 	include('./Model/MshowTraps.php');
-
-	if (isset($_SESSION['id'])) {
+	
+	if ($_SESSION['name']) {
 		include ('./Viewer/VshowTraps.php');
-		$traps = get_traps($_SESSION['id']); /* Sort un tableau contenant les traps */
+		$traps = get_traps();
 	}else{
 		include('./Controller/Cindex.php');
 	}
