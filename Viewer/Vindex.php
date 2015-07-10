@@ -43,7 +43,7 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 17
+								 0.06%
 							</div>
 							<div class="desc">
 								 Lost Packets Today
