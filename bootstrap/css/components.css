@@ -5178,6 +5178,118 @@ Dashboard Discover
 
 
 
+
+/***
+Dashboard supervision
+***/
+.dashboard-supervision {
+  display: block;
+  padding-right: 140px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.dashboard-supervision:before, .dashboard-supervision:after {
+  content: " ";
+  display: table;
+}
+.dashboard-supervision:after {
+  clear: both;
+}
+.portlet .dashboard-supervision:last-child {
+  margin-bottom: 0;
+}
+.dashboard-supervision .visual {
+  width: 80px;
+  height: 120px;
+  display: block;
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-size: 35px;
+  line-height: 35px;
+}
+.dashboard-supervision .visual > i {
+  margin-left: -35px;
+  font-size: 110px;
+  line-height: 110px;
+}
+.dashboard-supervision .details {
+  padding-top: 10px;
+  position: absolute;
+  right: 30px;
+  padding-right: 15px;
+}
+.dashboard-supervision .details .hostname {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
+  font-weight: 300;
+}
+.dashboard-supervision .details .ip {
+  text-align: center;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0px;
+  margin-bottom: 0px;
+  font-weight: 300;
+}
+.dashboard-supervision .details .mac {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0px;
+  font-weight: 300;
+}
+.dashboard-supervision .details .constructeur {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: -1px;
+  font-weight: 300;
+}
+.dashboard-supervision .more {
+  clear: both;
+  display: block;
+  padding: 6px 10px 6px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 11px;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+.dashboard-supervision .more:hover {
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.dashboard-supervision .more > i {
+  display: inline-block;
+  margin-top: 1px;
+  float: right;
+}
+
+.dashboard-supervision-light {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.dashboard-supervision-light .details {
+  margin-bottom: 5px;
+}
+.dashboard-supervision-light .details .number {
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+
+
 /***
 Dashboard Stats 2
 ***/

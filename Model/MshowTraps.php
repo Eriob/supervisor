@@ -7,7 +7,7 @@ function get_traps (){
 		while($trap = mysql_fetch_array($request)){
 		if($count %4 == 0) echo '<div class="row">';
 			echo '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<button  onclick="" class="dashboard-discover dashboard-discover-light blue-soft" id="bouton_achanger">
+					<button  onclick="" class="dashboard-supervision dashboard-supervision-light purple-soft" id="bouton_achanger">
 					<div class="visual"></div>
 					<div class="details">
 						<div class="hostname">
