@@ -1,5 +1,4 @@
 <?php
-<?php
 	include('./Model/MconnectBDD.php');
 	include('./Model/MaddProfileSupervision.php');
 	if (isset($_SESSION['name'])) {
