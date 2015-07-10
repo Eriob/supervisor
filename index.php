@@ -5,6 +5,9 @@ header('Content-type: text/html; charset=UTF-8');
 
 if (isset($_GET['index']) && $_GET['index'] == "showIp") {
     include_once('./Controller/CshowIp.php');
+}else if($_GET['index'])&& $_GET['index'] == "AddProfileSupervision"){
+	include_once('./Controller/CaddProfileSupervision');
+	include_once('./Viewer/Vfooter.php');
 }else{
     include_once('./Controller/Cheader.php');
     include_once('./Controller/Cnavbar.php');
@@ -65,10 +68,10 @@ if (isset($_GET['index']) && $_GET['index'] == "showIp") {
                     include('./Controller/CToDo.php');
                     include_once('./Viewer/Vfooter.php');
                     break;
-                case "addProfileSupervision":
+                /*case "addProfileSupervision":
                     include('./Controller/CaddProfileSupervision.php');
                     include_once('./Viewer/Vfooter.php');
-                    break;
+                    break;*/
                 case "showTraps":
                     include('./Controller/CshowTraps.php');
                     include_once('./Viewer/Vfooter.php');

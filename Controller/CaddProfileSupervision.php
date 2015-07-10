@@ -56,7 +56,7 @@
 	addDisk($data, $partition, $charge); */
 		
 		
-	$snmpd_conf = fopen('snmpd.conf', 'a+');
+	$snmpd_conf = fopen('snmpd.conf', 'w+');
 
 	fputs($snmpd_conf, "##############################\n#Fichier de configuration snmp\n#Généré automatiquement par Supervisor\n##############################\nrocommunity $public_com \nrwcommunity $private_com \nsyscontact $syscontact \nsyslocation $syslocation \ninformsink 10.8.96.6 supervisor \nauthtrapenable 2 \ndefaultMonitors yes \nlinkUpDownNotifications yes \ndisk $partition $charge\nproc $service $ins_max $ins_min \nprocfix $service /etc/init.d/$service restart \n");
 	fclose($snmpd_conf);
