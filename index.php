@@ -5,7 +5,7 @@ header('Content-type: text/html; charset=UTF-8');
 
 if (isset($_GET['index']) && $_GET['index'] == "showIp") {
     include_once('./Controller/CshowIp.php');
-}else if($_GET['index'])&& $_GET['index'] == "AddProfileSupervision"){
+}else if(isset($_GET['index'])&& $_GET['index'] == "AddProfileSupervision"){
 	include_once('./Controller/CaddProfileSupervision');
 	include_once('./Viewer/Vfooter.php');
 }else{
