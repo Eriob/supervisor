@@ -32,7 +32,7 @@ function get_traps (){
 		if($count %4 == 0) echo '</div><br>';
 	}
 
-		echo "<br><br><br><br><br></div>";
+		echo "<br><br><br><br><br></div></div>";
 		
 	
 }
