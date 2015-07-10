@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-
-
 if (isset($_GET['index']) && $_GET['index'] == "showIp") {
     include_once('./Controller/CshowIp.php');
 }else if(isset($_GET['index'])&& $_GET['index'] == "addProfileSupervision"){
