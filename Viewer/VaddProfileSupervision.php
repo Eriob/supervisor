@@ -64,7 +64,7 @@
 								
 							<div class="form-group" >
 								<label for="ins_max" class="control-label">Minimum instances:</label>
-								<input id="ins_max" type="text" name="ins_max" class="form-control" />
+								<input id="ins_max" type="text" name="ins_max" class="form-control"/>
 							</div>
 							
 							<div class="form-group" >

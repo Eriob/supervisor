@@ -8,49 +8,46 @@
 	else{
 		include('./Controller/Cindex.php');
 	}
-	var_dump($_POST);
-	
-	
 
-if (isset($_POST['public_com'])&& ($_POST['public_com']!= '')){
+	if (isset($_POST['public_com'])&& ($_POST['public_com']!= '')){
 		$public_com = $_POST['public_com'];
 	}
 	
-if (isset($_POST['private_com'])&& ($_POST['private_com']!= '')){
+	if (isset($_POST['private_com'])&& ($_POST['private_com']!= '')){
 		$private_com = $_POST['private_com'];
 	}
 	
-if (isset($_POST['syscontact'])&& ($_POST['syscontact']!= '')){
+	if (isset($_POST['syscontact'])&& ($_POST['syscontact']!= '')){
 		$syscontact = $_POST['syscontact'];
 	}
 
-if (isset($_POST['syslocation'])&& ($_POST['syslocation']!= '')){
+	if (isset($_POST['syslocation'])&& ($_POST['syslocation']!= '')){
 		$syslocation = $_POST['syslocation'];
 	}
 
-if (isset($_POST['service'])&& ($_POST['service']!= '')){
+	if (isset($_POST['service'])&& ($_POST['service']!= '')){
 		$service = $_POST['service'];
 	}
 
-if (isset($_POST['ins_min'])&& ($_POST['ins_min']!= '')){
+	if (isset($_POST['ins_min'])&& ($_POST['ins_min']!= '')){
 		$ins_min = $_POST['ins_min'];
 	}
 
-if (isset($_POST['ins_max'])&& ($_POST['ins_max']!= '')){
+	if (isset($_POST['ins_max'])&& ($_POST['ins_max']!= '')){
 		$ins_max = $_POST['ins_max'];
 	}
 	
-if (isset($_POST['partition'])&& ($_POST['partition']!= '')){
+	if (isset($_POST['partition'])&& ($_POST['partition']!= '')){
 		$partition = $_POST['partition'];
 	}
 	
-if (isset($_POST['charge'])&& ($_POST['charge']!= '')){
+	if (isset($_POST['charge'])&& ($_POST['charge']!= '')){
 		$charge = $_POST['charge'];
 	}
 
-if (isset($public_com, $private_com, $syscontact, $syslocation, $service, $ins_min, $ins_max, $partition, $charge)){
-	$snmpd_conf = fopen('snmpd.conf', 'w');
-	/* addSupervision($_SESSION['id'], $public_com, $private_com, $syscontact, $syslocation);	
+	if (isset($public_com, $private_com, $syscontact, $syslocation, $service, $ins_min, $ins_max, $partition, $charge)){
+	/*$snmpd_conf = fopen('snmpd.conf', 'w');
+	 addSupervision($_SESSION['id'], $public_com, $private_com, $syscontact, $syslocation);	
 	$superv_id = get_id($_SESSION['id']);
 	$services = get_services($superv_id);
 	$disks = get_disks($superv_id);
