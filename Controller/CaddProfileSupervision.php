@@ -1,13 +1,13 @@
 <?php
 	include('./Model/MconnectBDD.php');
 	include('./Model/MaddProfileSupervision.php');
-	if (isset($_SESSION['name'])) {
+	 /* if (isset($_SESSION['name'])) {
 		include ('./Viewer/VaddProfileSupervision.php');
 		
 	}
 	else{
 		include('./Controller/Cindex.php');
-	}
+	} */
 
 	if (isset($_POST['public_com'])&& ($_POST['public_com']!= '')){
 		$public_com = $_POST['public_com'];
