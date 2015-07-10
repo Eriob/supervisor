@@ -34,61 +34,49 @@
 							</div>
 							<div class="form-group">
 								<label for="public_com" class="control-label">Your public community:</label>
-								<input type="text" name="public_com" id="public_com" class="form-control"value="<?php if(isset($superv_id['public_com'])){echo $superv_id['public_com'];}?>" required="required"/>
+								<input type="text" name="public_com" id="public_com" class="form-control" required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="private_com" class="control-label">Your private community:</label>
-								<input type="text" name="private_com" id="private_com" class="form-control" value="<?php if(isset($superv_id['private_com'])){echo $superv_id['private_com'];}?>" required="required"/>
+								<input type="text" name="private_com" id="private_com" class="form-control" required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syscontact" class="control-label">System admin's mail:</label>
-								<input type="text" name="syscontact" id="syscontact" class="form-control" value="<?php if(isset($superv_id['admin_mail'])){echo $superv_id['admin_mail'];}?>" required="required"/>
+								<input type="text" name="syscontact" id="syscontact" class="form-control" required="required"/>
 							</div>
 			
 							<div class="form-group">
 								<label for="syslocation" class="control-label">System location:</label>
-								<input type="text" name="syslocation" id="syslocation" class="form-control" value="<?php if(isset($superv_id['syslocation'])){echo $superv_id['syslocation'];}?>" required="required"/>
+								<input type="text" name="syslocation" id="syslocation" class="form-control" required="required"/>
+							</div>
+
+							<div class="form-group" >
+								<label for="nom" class="control-label">Process to supervise:</label>
+								<input id="service" type="text" name="service" />
+							</div>
+
+							<div class="form-group" >
+								<label for="nom" class="control-label">Maximum instances:</label>
+								<input id="ins_min" type="text" name="ins_min" />
+							</div>
+								
+							<div class="form-group" >
+								<label for="nom" class="control-label">Minimum instances:</label>
+								<input id="ins_max" type="text" name="ins_max" />
 							</div>
 							
-						
-							<form name="addService">
-								<div class="form-group" >
-								<br><label for="nom" class="control-label">Process to supervise:</label>
-								<input id="nom" type="text" name="nom" />
-								</div>
-
-								<div class="form-group" >
-								<br><label for="nom" class="control-label">Maximum instances:</label>
-								<input id="minimum" type="text" name="minimum" />
-								</div>
-								
-								<div class="form-group" >
-								<br><label for="nom" class="control-label">Minimum instances:</label>
-								<input id="maximum" type="text" name="maximum" />
-								</div>
-								<br>
-							</form>
-							<button type="button" id="btnAddForm" onclick="CloneForm('addService');">Add another process</button>
-							<br>	
-			
 							<div class="form-group" >
-							<form name="addDisk">
-								<div class="form-group" >
 								<br><label for="nom" class="control-label">Name of the disk to supervise:</label>
-								<input id="nom" type="text" name="nom" />
-								</div>
+								<input id="partition" type="text" name="partition" />
+							</div>
 								
-								<div class="form-group" >
+							<div class="form-group" >
 								<br><label for="nom" class="control-label">Maximum load:</label>
-								<input id="minimum" type="text" name="minimum" />
-								<br></div>
-							</form>
-							<button type="button" id="btnAddForm" onclick="CloneForm('addDisk');">Add another disk</button>
-							<br>	
-			
-
+								<input id="charge" type="text" name="charge" />
+							</div>
+		
                             <button type="submit" href="index.php?addProfileSupervision" class="btn btn-primary pull-left">Valid profile</button>
                         </div>
                         <br><br><br><br><br><br><br><br><br>
