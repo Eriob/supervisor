@@ -53,27 +53,27 @@
 							</div>
 
 							<div class="form-group" >
-								<label for="nom" class="control-label">Process to supervise:</label>
+								<label for="service" class="control-label">Process to supervise:</label>
 								<input id="service" type="text" name="service" />
 							</div>
 
 							<div class="form-group" >
-								<label for="nom" class="control-label">Maximum instances:</label>
+								<label for="ins_min" class="control-label">Maximum instances:</label>
 								<input id="ins_min" type="text" name="ins_min" />
 							</div>
 								
 							<div class="form-group" >
-								<label for="nom" class="control-label">Minimum instances:</label>
+								<label for="ins_max" class="control-label">Minimum instances:</label>
 								<input id="ins_max" type="text" name="ins_max" />
 							</div>
 							
 							<div class="form-group" >
-								<br><label for="nom" class="control-label">Name of the disk to supervise:</label>
+								<br><label for="partition" class="control-label">Name of the disk to supervise:</label>
 								<input id="partition" type="text" name="partition" />
 							</div>
 								
 							<div class="form-group" >
-								<br><label for="nom" class="control-label">Maximum load:</label>
+								<br><label for="charge" class="control-label">Maximum load:</label>
 								<input id="charge" type="text" name="charge" />
 							</div>
 		
