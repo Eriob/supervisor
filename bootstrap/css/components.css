@@ -5204,7 +5204,7 @@ Dashboard supervision
   margin-bottom: 0;
 }
 .dashboard-supervision .visual {
-  width: 120px;
+  width: 100px;
   height: 120px;
   display: block;
   float: left;
@@ -5222,7 +5222,7 @@ Dashboard supervision
 .dashboard-supervision .details {
   padding-top: 10px;
   position: absolute;
-  right: 20px;
+  right: 10px;
   padding-right: 15px;
 }
 .dashboard-supervision .details .hostname {
